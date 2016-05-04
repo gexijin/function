@@ -300,3 +300,10 @@ y = sort(x)
    return( y[length(x)-k+1] - y[k]) 
 }
 
+
+
+entropy <- function(x)
+{  x = x/sum(x)
+ x1 = log2(x+1e-50)
+ return( sum(-x*x1) )
+}
